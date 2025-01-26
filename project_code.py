@@ -99,7 +99,7 @@ def train(model, train_loader, val_loader, criterion, optimizer, epochs=10):
 # Train the model
 train(model, train_loader, val_loader, criterion, optimizer, epochs=10)
 
-# Chapter 4: Modified Neural Network with Convolutional Layers
+#  Modified Neural Network with Convolutional Layers
 class ModifiedNN(nn.Module):
     def __init__(self):
         super(ModifiedNN, self).__init__()
@@ -127,7 +127,7 @@ optimizer = optim.SGD(modified_model.parameters(), lr=0.01)  # Learning rate of 
 # Train the modified model
 train(modified_model, train_loader, val_loader, criterion, optimizer, epochs=10)
 
-# Chapter 5: Fine-tune a Pre-trained ResNet18 Model
+#  Fine-tune a Pre-trained ResNet18 Model
 from torchvision import models
 
 # Load a pre-trained ResNet18 model
@@ -153,7 +153,7 @@ optimizer = optim.SGD(resnet18.parameters(), lr=0.01)  # Learning rate of 0.01
 # Train the ResNet18 model
 train(resnet18, train_loader, val_loader, criterion, optimizer, epochs=5)
 
-# Chapter 6: Generate Class Activation Maps (CAMs)
+# Generate Class Activation Maps (CAMs)
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -220,7 +220,7 @@ cam = get_cam(resnet18, sample_image, sample_label)  # Use sample_label directly
 plot_cam(sample_image[0], cam)
 
 
-# Chapter 7: Intersection over Union (IoU) and Non-Maximum Suppression (NMS)
+# Intersection over Union (IoU) and Non-Maximum Suppression (NMS)
 
 def calculate_iou(box1, box2):
     x1 = max(box1[0], box2[0])
